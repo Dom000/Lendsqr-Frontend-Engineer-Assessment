@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AC+VA;;;;GAIG;ADjWH,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;CAC/B",
+    "sources": [
+        "user.scss",
+        "../../breakpoints/breakpoints.scss"
+    ],
+    "names": [],
+    "file": "user.css"
+}

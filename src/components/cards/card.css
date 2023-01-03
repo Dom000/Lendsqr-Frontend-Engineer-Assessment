@@ -1,0 +1,27 @@
+/**
+*
+* Testing
+*
+**/
+#card {
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+          box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+  width: 20%;
+}
+
+#card #cardTitle {
+  font-size: 12px;
+  color: "#545F7D";
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+#card #cardSubtitle {
+  color: #213f7d;
+  font-weight: bold;
+  font-size: 16px;
+}
+/*# sourceMappingURL=card.css.map */
