@@ -1,0 +1,102 @@
+@import "../../breakpoints/breakpoints.scss";
+
+$textBlue: #213f7d;
+$lightGreen: #39cdcc;
+
+#header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px 10px 15px;
+  align-items: center;
+  box-shadow: rgb(235, 235, 235) 100px 1px 10px 2px;
+
+  @include media("<=phone") {
+    //  background-color: $lightGreen;
+  }
+  @include media(">phone", "<=tablet", "retina2x") {
+    //  background-color: #faae0a;
+  }
+  #headerLogo {
+    margin-top: 10px;
+
+    @include media("<=phone") {
+      width: 90px;
+      margin-top: 10px;
+    }
+    width: 100px;
+  }
+  #inptsearch {
+    outline: none;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  #spansearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightGreen;
+    cursor: pointer;
+    color: #fff;
+    padding: 5px;
+    border-radius: 0 5px 5px 0;
+  }
+  ::placeholder {
+    font-size: 12px;
+    color: grey;
+    letter-spacing: 1px;
+  }
+
+  #mainschbx {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1.5px rgb(228, 228, 228);
+    border-radius: 5px;
+    width: 17rem;
+    @include media("<=phone") {
+      display: none;
+    }
+    @include media(">phone", "<=tablet", "retina2x") {
+      display: none;
+    }
+  }
+  #thirdbox {
+    min-width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media("<=phone") {
+      width: 65%;
+    }
+    @include media(">phone", "<=tablet", "retina2x") {
+      width: 50%;
+    }
+    #doc {
+      text-decoration: underline;
+    }
+
+    #secondSpan {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      #avatar {
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+      #inner {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

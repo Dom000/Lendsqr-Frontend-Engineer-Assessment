@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AC+VA;;;;GAIG;ADjWH,AAAA,OAAO,CAAC;EACN,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;CAcZ;;AAhBD,AAGE,OAHK,CAGL,KAAK,CAAC;EACJ,gBAAgB,EAAE,IAAI;EACtB,cAAc,EAAE,MAAM;EACtB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,KAAK;EACf,UAAU,EAAE,MAAM;CACnB;;AAVH,AAWE,OAXK,CAWL,KAAK,CAAC;EACJ,cAAc,EAAE,MAAM;EACtB,KAAK,EAAE,GAAG;EACV,WAAW,EAAE,GAAG;CACjB",
+    "sources": [
+        "root.scss",
+        "../breakpoints/breakpoints.scss"
+    ],
+    "names": [],
+    "file": "root.css"
+}

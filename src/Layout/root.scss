@@ -1,0 +1,19 @@
+@import "../breakpoints/breakpoints.scss";
+
+#layout {
+  display: flex;
+  width: 100%;
+  #side {
+    background-color: #fff;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+  }
+  #main {
+    flex-direction: column;
+    width: 80%;
+    margin-left: 20%;
+  }
+}

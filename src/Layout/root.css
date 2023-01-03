@@ -1,0 +1,33 @@
+/**
+*
+* Testing
+*
+**/
+#layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+#layout #side {
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+}
+
+#layout #main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin-left: 20%;
+}
+/*# sourceMappingURL=root.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AA+VA;;;;GAIG",
+    "sources": [
+        "breakpoints.scss"
+    ],
+    "names": [],
+    "file": "breakpoints.css"
+}
