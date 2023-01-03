@@ -3,4 +3,77 @@
 #cardHolder {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
+  @include media("<=phone") {
+    flex-direction: column;
+  }
+}
+
+#tableCard {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+}
+
+table {
+  width: 100%;
+  min-width: 700px;
+  td,
+  th {
+    border-bottom: 1px solid #dddddd;
+    padding: 8px;
+  }
+  thead {
+    border-bottom: 2px solid rgb(110, 110, 110);
+    background-color: #fff;
+    width: 100%;
+    font-weight: bold;
+    font-size: 13px;
+    color: #213f7d;
+    tr {
+      border-bottom: 2px solid rgb(167, 167, 167);
+    }
+  }
+
+  .tddiv {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    p {
+      font-size: 12px;
+      margin-right: 10px;
+    }
+  }
+  .filterIcon {
+    cursor: pointer;
+    color: #213f7d;
+    margin-right: 5px;
+    // margin-top: 3px;
+    font-size: 18px;
+  }
+
+  tbody {
+    tr {
+      text-align: center;
+      border-bottom: 2px solid rgb(10, 10, 10);
+
+      td {
+        padding: 5px;
+
+        p {
+          font-size: 12px;
+          text-align: left;
+        }
+      }
+    }
+
+    tr:hover {
+      translate: 0.1em;
+      transition: all;
+      cursor: pointer;
+      //   box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+      color: rgb(179, 174, 174);
+    }
+  }
 }

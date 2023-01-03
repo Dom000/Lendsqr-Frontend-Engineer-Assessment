@@ -5,7 +5,12 @@
   border-radius: 7px;
   background-color: #fff;
   box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
-  width: 20%;
+  width: 22%;
+  @include media("<=phone") {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
   #cardTitle {
     font-size: 12px;

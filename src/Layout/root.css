@@ -23,6 +23,12 @@
   overflow-y: scroll;
 }
 
+@media (max-width: 360px) {
+  #layout #side {
+    display: none;
+  }
+}
+
 #layout #main {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -32,5 +38,12 @@
   margin-left: 20%;
   margin-top: 3%;
   padding: 20px;
+}
+
+@media (max-width: 360px) {
+  #layout #main {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=root.css.map */

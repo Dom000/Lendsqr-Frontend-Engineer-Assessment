@@ -9,7 +9,18 @@
   background-color: #fff;
   -webkit-box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
           box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
-  width: 20%;
+  width: 22%;
+}
+
+@media (max-width: 360px) {
+  #card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 #card #cardTitle {

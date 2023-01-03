@@ -10,5 +10,93 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 360px) {
+  #cardHolder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#tableCard {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  -webkit-box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+          box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+}
+
+table {
+  width: 100%;
+  min-width: 700px;
+}
+
+table td,
+table th {
+  border-bottom: 1px solid #dddddd;
+  padding: 8px;
+}
+
+table thead {
+  border-bottom: 2px solid #6e6e6e;
+  background-color: #fff;
+  width: 100%;
+  font-weight: bold;
+  font-size: 13px;
+  color: #213f7d;
+}
+
+table thead tr {
+  border-bottom: 2px solid #a7a7a7;
+}
+
+table .tddiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+table .tddiv p {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+table .filterIcon {
+  cursor: pointer;
+  color: #213f7d;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+table tbody tr {
+  text-align: center;
+  border-bottom: 2px solid #0a0a0a;
+}
+
+table tbody tr td {
+  padding: 5px;
+}
+
+table tbody tr td p {
+  font-size: 12px;
+  text-align: left;
+}
+
+table tbody tr:hover {
+  translate: 0.1em;
+  -webkit-transition: all;
+  transition: all;
+  cursor: pointer;
+  color: #b3aeae;
 }
 /*# sourceMappingURL=user.css.map */

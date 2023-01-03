@@ -11,6 +11,9 @@
     height: 100%;
     position: fixed;
     overflow-y: scroll;
+    @include media("<=phone") {
+      display: none;
+    }
   }
   #main {
     flex-direction: column;
@@ -18,5 +21,10 @@
     margin-left: 20%;
     margin-top: 3%;
     padding: 20px;
+    @include media("<=phone") {
+      // flex-direction: column;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }
