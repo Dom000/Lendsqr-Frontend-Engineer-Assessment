@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import Root from "./Layout/Root";
 import ErrorPage from "./error-page";
 import Users from "./pages/user/Users";
+import UserDetails from "./pages/user/UserDetails";
 // import "../src/components/Header/Header.scss"
 
 const router = createBrowserRouter([
@@ -14,10 +15,15 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
+
     children: [
       {
-        path: "/users",
+        path: "/",
         element: <Users />,
+      },
+      {
+        path: "/user/:id",
+        element: <UserDetails />,
       },
     ],
   },

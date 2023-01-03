@@ -17,6 +17,10 @@
           align-items: center;
   -webkit-box-shadow: #ebebeb 100px 1px 10px 2px;
           box-shadow: #ebebeb 100px 1px 10px 2px;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 #header #headerLogo {

@@ -1,79 +1,13 @@
 import React from "react";
 import "./root.css";
 import { Outlet } from "react-router-dom";
+import Sidebar from "../components/sidebnav/Sidebar";
 
 function Root() {
   return (
     <div id="layout">
       <div id="side">
-        <ul>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-        </ul>
+        <Sidebar />
       </div>
       <div id="main">
         <Outlet />

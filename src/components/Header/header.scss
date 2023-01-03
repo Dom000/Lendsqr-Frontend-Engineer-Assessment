@@ -10,6 +10,12 @@ $lightGreen: #39cdcc;
   padding: 10px 15px 10px 15px;
   align-items: center;
   box-shadow: rgb(235, 235, 235) 100px 1px 10px 2px;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  // margin-bottom: 40px;
+
 
   @include media("<=phone") {
     //  background-color: $lightGreen;

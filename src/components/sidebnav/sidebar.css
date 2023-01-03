@@ -1,0 +1,91 @@
+/**
+*
+* Testing
+*
+**/
+#navbox {
+  -webkit-transition: all;
+  transition: all;
+  padding-bottom: 40px;
+}
+
+#navbox #navhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 50px 0;
+  width: 80%;
+  margin-left: 8%;
+}
+
+#navbox #navItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  width: 100%;
+  margin: 15px 0px;
+  padding: 0 20px;
+}
+
+#navbox #navItemsActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 255, 255, 0.103);
+  border-left: 4px solid #39cdcc;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  width: 100%;
+  margin: 15px 0px;
+  padding: 0 20px;
+}
+
+#navbox #navItems:hover {
+  cursor: pointer;
+  background-color: rgba(0, 255, 255, 0.066);
+  border-radius: 5px;
+}
+
+#navbox #navItems2:hover {
+  cursor: pointer;
+  background-color: rgba(0, 255, 255, 0.066);
+  width: 100%;
+  border-radius: 5px;
+}
+
+#navbox #navItems2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 15px 0px;
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=sidebar.css.map */
