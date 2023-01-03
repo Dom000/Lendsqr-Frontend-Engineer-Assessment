@@ -7,12 +7,26 @@ import { BsFilter, BsThreeDotsVertical } from "react-icons/bs";
 import { getAllusers } from "../../services/api";
 import moment from "moment";
 import { TablePagination } from "@mui/material";
+import CountUp from "react-countup";
 
 function Users() {
   const [users, setUsers] = useState([]);
+  const [userswithloan, setUsersWithLoan] = useState([]);
+  const [userswithbalance, setUsersWithBalance] = useState([]);
 
   const loadData = async () => {
     const userData = await getAllusers();
+    const newData = userData.filter((elemen: any) => {
+      let newEle = elemen?.education?.loanRepayment !== "";
+      return newEle;
+    });
+    const newData2 = userData.filter((elemen: any) => {
+      let newEle = elemen?.accountBalance !== "";
+      return newEle;
+    });
+
+    setUsersWithBalance(newData2);
+    setUsersWithLoan(newData);
     setUsers(userData);
   };
 
@@ -86,25 +100,25 @@ function Users() {
           icon={<FiUsers style={{ color: "#DF18FF" }} />}
           iconBg={"#e018ff28"}
           title="USERS"
-          Subtitle={2000}
+          Subtitle={<CountUp duration={8} end={users.length} />}
         />
         <Card
           icon={<HiOutlineUserGroup style={{ color: "#5718FF" }} />}
           iconBg={"#EEE8FF"}
           title="ACTIVE USERS"
-          Subtitle={2000}
+          Subtitle={<CountUp duration={8} end={users.length} />}
         />
         <Card
           icon={<HiOutlineDocumentText style={{ color: "#F55F44" }} />}
           iconBg={"#FEEFEC"}
           title="USERS WITH LOANS"
-          Subtitle={2000}
+          Subtitle={<CountUp duration={8} end={userswithloan.length} />}
         />
         <Card
           icon={<FiDatabase style={{ color: "#FF3366" }} />}
           iconBg={"#FFEBF0"}
           title="USERS ITH SAVINGS"
-          Subtitle={2000}
+          Subtitle={<CountUp duration={8} end={userswithbalance.length} />}
         />
       </div>
 

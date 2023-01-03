@@ -5,7 +5,7 @@ import { FiUsers } from "react-icons/fi";
 interface card_props {
   icon: ReactElement;
   title: string;
-  Subtitle: string | number;
+  Subtitle: string | number|ReactElement;
   style?: object;
   iconBg: string;
 }
