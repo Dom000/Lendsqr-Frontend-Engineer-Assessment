@@ -14,11 +14,15 @@
   border-radius: 10px;
   padding: 18px;
   box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+  overflow-x: scroll;
+  width: 100%;
+  //   min-width: 700px;
 }
 
 table {
   width: 100%;
-  min-width: 700px;
+  min-width: 900px;
+  overflow-x: scroll;
   td,
   th {
     border-bottom: 1px solid #dddddd;
@@ -60,7 +64,7 @@ table {
 
       td {
         padding: 5px;
-
+        position: relative;
         p {
           font-size: 12px;
           text-align: left;
@@ -69,10 +73,11 @@ table {
     }
 
     tr:hover {
-      translate: 0.1em;
-      transition: all;
+      //   translate: 0.1em;
+        transition: all;
+      position: relative;
       cursor: pointer;
-      //   box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+      box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
       color: rgb(179, 174, 174);
     }
   }

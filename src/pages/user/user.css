@@ -28,11 +28,14 @@
   padding: 18px;
   -webkit-box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
           box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+  overflow-x: scroll;
+  width: 100%;
 }
 
 table {
   width: 100%;
-  min-width: 700px;
+  min-width: 900px;
+  overflow-x: scroll;
 }
 
 table td,
@@ -85,6 +88,7 @@ table tbody tr {
 
 table tbody tr td {
   padding: 5px;
+  position: relative;
 }
 
 table tbody tr td p {
@@ -93,10 +97,12 @@ table tbody tr td p {
 }
 
 table tbody tr:hover {
-  translate: 0.1em;
   -webkit-transition: all;
   transition: all;
+  position: relative;
   cursor: pointer;
+  -webkit-box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+          box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
   color: #b3aeae;
 }
 /*# sourceMappingURL=user.css.map */

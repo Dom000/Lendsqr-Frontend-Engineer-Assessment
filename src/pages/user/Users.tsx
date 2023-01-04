@@ -1,4 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  ReactEventHandler,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 import Card from "../../components/cards/Card";
 import { FiUsers, FiDatabase } from "react-icons/fi";
 import { HiOutlineUserGroup, HiOutlineDocumentText } from "react-icons/hi";
@@ -8,11 +13,20 @@ import { getAllusers } from "../../services/api";
 import moment from "moment";
 import { TablePagination } from "@mui/material";
 import CountUp from "react-countup";
+import ActionTab from "../../components/actionTab/ActionTab";
+import { useLocation, useNavigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
 
 function Users() {
+  const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [userswithloan, setUsersWithLoan] = useState([]);
   const [userswithbalance, setUsersWithBalance] = useState([]);
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [activerow, setActiveRow] = useState<any | null>(null);
+
+  console.log(activerow);
 
   const loadData = async () => {
     const userData = await getAllusers();
@@ -33,8 +47,6 @@ function Users() {
   useEffect(() => {
     loadData();
   }, []);
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
@@ -47,9 +59,16 @@ function Users() {
     setPage(0);
   };
 
+  const handleClick = ({ id }: any) => {
+    navigate(`/user/${id}`);
+  };
+  const handleShowTab = (e: number) => {
+    setActiveRow(e);
+  };
+
   const rows = users
     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-    .map((element: any) => (
+    .map((element: any, index: number) => (
       <tr
         //   onClick={() => {
         //     router.push(`/admin/incentive_mgt/details`);
@@ -77,7 +96,15 @@ function Users() {
           <p>{element.orgName}</p>
         </td>
         <td className="md:text-base text-xs p-3">
-          <BsThreeDotsVertical />
+          <>
+            {activerow === index ? (
+              <ActionTab
+                // onDismiss={() => setActiveRow(null)}
+                onClick={() => handleClick(element)}
+              />
+            ) : null}
+            <BsThreeDotsVertical onClick={() => handleShowTab(index)} />
+          </>
         </td>
       </tr>
     ));

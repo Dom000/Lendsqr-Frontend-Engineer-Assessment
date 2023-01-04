@@ -1,0 +1,42 @@
+/**
+*
+* Testing
+*
+**/
+#actionbox {
+  border-radius: 10px;
+  position: absolute;
+  right: 20px;
+  background-color: #fff;
+  width: 120px;
+  z-index: 2000;
+  display: block;
+  -webkit-box-shadow: rgba(179, 179, 179, 0.299) 5px 10px 10px 10px;
+          box-shadow: rgba(179, 179, 179, 0.299) 5px 10px 10px 10px;
+}
+
+#actionbox .actionflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px;
+}
+
+#actionbox .actionflex:hover {
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  padding: 8px;
+  background-color: #eeeeee;
+}
+/*# sourceMappingURL=actiontab.css.map */

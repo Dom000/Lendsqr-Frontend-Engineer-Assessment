@@ -2,7 +2,7 @@ import React from "react";
 import { sidenavs } from "../../services/json.js";
 import { FaBriefcase } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./sidebar.css";
 
 console.log(sidenavs);
@@ -10,7 +10,7 @@ console.log(sidenavs);
 function Sidebar() {
   let location = useLocation();
   // console.log(location.pathname);
-
+  const navigate = useNavigate();
   return (
     <div id="navbox">
       <div id="navhead">
@@ -41,7 +41,7 @@ function Sidebar() {
           <div id="wrap" key={index}>
             {item.child.map((itm, indx) =>
               item.title === null ? (
-                <div id="navItems2">
+                <div onClick={() => navigate(itm.href)} id="navItems2">
                   <div>
                     {
                       <itm.icon
@@ -67,7 +67,7 @@ function Sidebar() {
                   </div>
                 </div>
               ) : itm.href === location.pathname ? (
-                <div id="navItemsActive">
+                <div onClick={() => navigate(itm.href)} id="navItemsActive">
                   <div>
                     {
                       <itm.icon
@@ -93,7 +93,7 @@ function Sidebar() {
                   </div>
                 </div>
               ) : (
-                <div id="navItems">
+                <div onClick={() => navigate(itm.href)} id="navItems">
                   <div>
                     {
                       <itm.icon
