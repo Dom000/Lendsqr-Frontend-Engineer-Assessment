@@ -81,6 +81,17 @@ table .filterIcon {
   font-size: 18px;
 }
 
+table .filterIcon:hover {
+  cursor: pointer;
+  color: #213f7d;
+  margin-right: 5px;
+  -webkit-transition: all;
+  transition: all;
+  background-color: #e6e6e6;
+  padding: 3px;
+  font-size: 18px;
+}
+
 table tbody tr {
   text-align: center;
   border-bottom: 2px solid #0a0a0a;
@@ -94,6 +105,15 @@ table tbody tr td {
 table tbody tr td p {
   font-size: 12px;
   text-align: left;
+}
+
+table tbody tr td .activebadge {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #39cd632b;
+  color: #39CD62;
+  font-size: 10px;
+  margin-right: 50px;
 }
 
 table tbody tr:hover {

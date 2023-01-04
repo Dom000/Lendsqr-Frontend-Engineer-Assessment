@@ -16,10 +16,12 @@ import CountUp from "react-countup";
 import ActionTab from "../../components/actionTab/ActionTab";
 import { useLocation, useNavigate } from "react-router-dom";
 import { redirect } from "react-router-dom";
+import FilterAction from "../../components/filterAction/FilterAction";
 
 function Users() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
+  const [filtertab, setFilterTab] = useState(false);
   const [userswithloan, setUsersWithLoan] = useState([]);
   const [userswithbalance, setUsersWithBalance] = useState([]);
   const [page, setPage] = React.useState(0);
@@ -93,7 +95,7 @@ function Users() {
           <p>{new Date(element?.createdAt).toLocaleString()}</p>
         </td>
         <td className="md:text-base text-xs p-3">
-          <p>{element.orgName}</p>
+          <span className="activebadge">Active</span>
         </td>
         <td className="md:text-base text-xs p-3">
           <>
@@ -158,39 +160,58 @@ function Users() {
               <td className="">
                 <div className=" tddiv ">
                   <p>organization</p>
-                  <BsFilter />
+                  <BsFilter
+                    onClick={() => setFilterTab(!filtertab)}
+                    className="filterIcon"
+                  />
                 </div>
+                {filtertab && <FilterAction />}
               </td>
               <td className="">
                 <div className=" tddiv ">
                   <p className="">Username</p>
-                  <BsFilter className="filterIcon" />
+                  <BsFilter
+                    onClick={() => setFilterTab(!filtertab)}
+                    className="filterIcon"
+                  />
                 </div>
               </td>
 
               <td className="">
                 <div className=" tddiv  ">
                   <p>Email</p>
-                  <BsFilter className="filterIcon" />
+                  <BsFilter
+                    onClick={() => setFilterTab(!filtertab)}
+                    className="filterIcon"
+                  />
                 </div>
               </td>
               <td className="">
                 <div className="tddiv ">
                   <p className="">Phone number</p>
-                  <BsFilter className="filterIcon" />
+                  <BsFilter
+                    onClick={() => setFilterTab(!filtertab)}
+                    className="filterIcon"
+                  />
                 </div>
               </td>
               <td className="">
                 <div className="tddiv  ">
                   <p className="">Date joined</p>
-                  <BsFilter className="filterIcon" />
+                  <BsFilter
+                    onClick={() => setFilterTab(!filtertab)}
+                    className="filterIcon"
+                  />
                 </div>
               </td>
 
               <td className="">
                 <div className=" tddiv ">
                   <p className="">Status</p>
-                  <BsFilter className="filterIcon" />
+                  <BsFilter
+                    onClick={() => setFilterTab(!filtertab)}
+                    className="filterIcon"
+                  />
                 </div>
               </td>
               <td className=""></td>

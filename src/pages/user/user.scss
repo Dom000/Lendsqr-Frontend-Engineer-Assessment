@@ -56,6 +56,15 @@ table {
     // margin-top: 3px;
     font-size: 18px;
   }
+  .filterIcon:hover {
+    cursor: pointer;
+    color: #213f7d;
+    margin-right: 5px;
+    transition: all;
+    background-color: rgb(230, 230, 230);
+    padding: 3px;
+    font-size: 18px;
+  }
 
   tbody {
     tr {
@@ -69,12 +78,20 @@ table {
           font-size: 12px;
           text-align: left;
         }
+        .activebadge {
+          padding: 5px 10px;
+          border-radius: 10px;
+          background-color: #39cd632b;
+          color: #39CD62;
+          font-size: 10px;
+          margin-right: 50px;
+        }
       }
     }
 
     tr:hover {
       //   translate: 0.1em;
-        transition: all;
+      transition: all;
       position: relative;
       cursor: pointer;
       box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
