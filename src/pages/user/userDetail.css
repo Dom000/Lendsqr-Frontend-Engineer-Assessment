@@ -32,6 +32,26 @@
   gap: 10px;
 }
 
+@media (max-width: 360px) {
+  #detailDiv .sevDiv .detailBox {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px;
+        grid-template-columns: 180px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 361px) and (max-width: 768px) and (min-resolution: 192dpi) {
+  #detailDiv .sevDiv .detailBox {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px 180px;
+        grid-template-columns: 180px 180px;
+    margin-bottom: 20px;
+  }
+}
+
 #detailDiv .sevDiv .detailBox .firstP {
   color: #adadad;
   font-size: 10px;

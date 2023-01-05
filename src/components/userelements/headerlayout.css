@@ -12,6 +12,18 @@
   width: 100%;
 }
 
+@media (max-width: 360px) {
+  #header_Box {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 361px) and (max-width: 768px) and (min-resolution: 192dpi) {
+  #header_Box {
+    margin-top: 50px;
+  }
+}
+
 #header_Box #innerDiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,10 +33,83 @@
           align-items: center;
 }
 
+@media (max-width: 360px) {
+  #header_Box #innerDiv {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 361px) and (max-width: 768px) and (min-resolution: 192dpi) {
+  #header_Box #innerDiv {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 #header_Box #innerDiv .three_ {
   margin-right: 40px;
   border-right: 1px #d4d4d4 solid;
   padding-right: 20px;
+}
+
+@media (max-width: 360px) {
+  #header_Box #innerDiv .three_ {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 361px) and (max-width: 768px) and (min-resolution: 192dpi) {
+  #header_Box #innerDiv .three_ {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 #header_Box #innerDiv .three_ .pr {
@@ -73,14 +158,34 @@
 }
 
 #header_Box #routesBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px 150px 150px 150px 150px 150px;
+      grid-template-columns: 150px 150px 150px 150px 150px 150px;
+  gap: 5px;
   margin-top: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 360px) {
+  #header_Box #routesBox {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 150px 150px;
+        grid-template-columns: 150px 150px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 361px) and (max-width: 768px) and (min-resolution: 192dpi) {
+  #header_Box #routesBox {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 150px 150px 150px 150px;
+        grid-template-columns: 150px 150px 150px 150px;
+    gap: 5px;
+    margin-top: 20px;
+  }
 }
 
 #header_Box #routesBox .routeLinks {
@@ -92,6 +197,7 @@
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 #header_Box #routesBox .routeLinks p:hover {
@@ -111,5 +217,6 @@
   margin-bottom: -8px;
   color: #39cdcc;
   font-size: 12px;
+  text-align: center;
 }
 /*# sourceMappingURL=headerlayout.css.map */

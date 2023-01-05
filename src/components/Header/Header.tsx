@@ -103,7 +103,7 @@ function Header() {
                 <div id="wrap2" key={index}>
                   {item.child.map((itm, indx) =>
                     item.title === null ? (
-                      <div id="navItems2">
+                      <div  id="navItems2">
                         <div>
                           {
                             <itm.icon

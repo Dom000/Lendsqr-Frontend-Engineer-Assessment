@@ -22,6 +22,16 @@ $textgrey: #545f7d;
       display: grid;
       grid-template-columns: 180px 180px 180px 180px 180px;
       margin-bottom: 20px;
+      @include media("<=phone") {
+        display: grid;
+        grid-template-columns: 180px;
+        margin-bottom: 20px;
+      }
+      @include media(">phone", "<=tablet", "retina2x") {
+        display: grid;
+        grid-template-columns: 180px 180px ;
+        margin-bottom: 20px;
+      }
       gap: 10px;
       .firstP {
         color: rgb(173, 173, 173);
