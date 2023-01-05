@@ -88,6 +88,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border-right: 1px white solid;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -106,6 +107,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border-right: 1px white solid;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

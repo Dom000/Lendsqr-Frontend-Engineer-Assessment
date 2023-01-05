@@ -66,10 +66,11 @@ function Header() {
       </div>
       {/* sidebar  ############################### */}
       {sideBar && (
-        <div
-          id="mobilenavbox1"
-        >
-          <div id="mobilenavbox" className="animate__animated animate__slideInLeft">
+        <div id="mobilenavbox1">
+          <div
+            id="mobilenavbox"
+            className="animate__animated animate__slideInLeft"
+          >
             <div id="closeIcon" onClick={() => dispatch(handleSidebar(false))}>
               <AiOutlineClose style={{ fontSize: 24 }} />
             </div>
@@ -103,86 +104,95 @@ function Header() {
                 <div id="wrap2" key={index}>
                   {item.child.map((itm, indx) =>
                     item.title === null ? (
-                      <div  id="navItems2">
-                        <div>
-                          {
-                            <itm.icon
+                      <a href={itm.href}>
+                        {" "}
+                        <div id="navItems2">
+                          <div>
+                            {
+                              <itm.icon
+                                style={{
+                                  color: "#213F7D",
+                                  marginTop: 2,
+                                  marginRight: 18,
+                                  // opacity: itm.href === location.pathname ? 0.9 : 0.5,
+                                }}
+                              />
+                            }
+                          </div>
+                          <div>
+                            <p
                               style={{
                                 color: "#213F7D",
-                                marginTop: 2,
-                                marginRight: 18,
-                                // opacity: itm.href === location.pathname ? 0.9 : 0.5,
+                                fontSize: 14,
+                                opacity:
+                                  itm.href === location.pathname ? 0.9 : 0.5,
                               }}
-                            />
-                          }
+                            >
+                              {itm.pageName}
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <p
-                            style={{
-                              color: "#213F7D",
-                              fontSize: 14,
-                              opacity:
-                                itm.href === location.pathname ? 0.9 : 0.5,
-                            }}
-                          >
-                            {itm.pageName}
-                          </p>
-                        </div>
-                      </div>
+                      </a>
                     ) : itm.href === location.pathname ? (
-                      <div id="navItemsActive2">
-                        <div>
-                          {
-                            <itm.icon
+                      <a href={itm.href}>
+                        {" "}
+                        <div id="navItemsActive2">
+                          <div>
+                            {
+                              <itm.icon
+                                style={{
+                                  color: "#213F7D",
+                                  marginTop: 2,
+                                  marginRight: 18,
+                                  // opacity: itm.href === location.pathname ? 0.9 : 0.5,
+                                }}
+                              />
+                            }
+                          </div>
+                          <div>
+                            <p
                               style={{
                                 color: "#213F7D",
-                                marginTop: 2,
-                                marginRight: 18,
-                                // opacity: itm.href === location.pathname ? 0.9 : 0.5,
+                                fontSize: 14,
+                                opacity:
+                                  itm.href === location.pathname ? 0.9 : 0.5,
                               }}
-                            />
-                          }
+                            >
+                              {itm.pageName}
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <p
-                            style={{
-                              color: "#213F7D",
-                              fontSize: 14,
-                              opacity:
-                                itm.href === location.pathname ? 0.9 : 0.5,
-                            }}
-                          >
-                            {itm.pageName}
-                          </p>
-                        </div>
-                      </div>
+                      </a>
                     ) : (
-                      <div id="navItems2">
-                        <div>
-                          {
-                            <itm.icon
+                      <a href={itm.href}>
+                        {" "}
+                        <div id="navItems2">
+                          <div>
+                            {
+                              <itm.icon
+                                style={{
+                                  color: "#213F7D",
+                                  marginTop: 2,
+                                  marginRight: 18,
+                                  // opacity: itm.href === location.pathname ? 0.9 : 0.5,
+                                }}
+                              />
+                            }
+                          </div>
+                          <div>
+                            <p
                               style={{
                                 color: "#213F7D",
-                                marginTop: 2,
-                                marginRight: 18,
-                                // opacity: itm.href === location.pathname ? 0.9 : 0.5,
+                                fontSize: 14,
+                                opacity:
+                                  itm.href === location.pathname ? 0.9 : 0.5,
                               }}
-                            />
-                          }
+                            >
+                              {itm.pageName}
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <p
-                            style={{
-                              color: "#213F7D",
-                              fontSize: 14,
-                              opacity:
-                                itm.href === location.pathname ? 0.9 : 0.5,
-                            }}
-                          >
-                            {itm.pageName}
-                          </p>
-                        </div>
-                      </div>
+                      </a>
                     )
                   )}
                 </div>

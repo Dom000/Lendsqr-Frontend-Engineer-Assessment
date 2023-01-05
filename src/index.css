@@ -24,6 +24,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+:root a {
+  text-decoration: none;
+}
+
 :root ::-webkit-scrollbar {
   width: 5px;
 }
