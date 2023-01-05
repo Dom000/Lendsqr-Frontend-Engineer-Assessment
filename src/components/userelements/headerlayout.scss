@@ -1,0 +1,89 @@
+@import "../../breakpoints/breakpoints.scss";
+
+$textBlue: #213f7d;
+$lightGreen: #39cdcc;
+
+#header_Box {
+  box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+
+  width: 100%;
+  //   height: 100px;
+  #innerDiv {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    .three_ {
+      margin-right: 40px;
+      border-right: 1px rgb(212, 212, 212) solid;
+      padding-right: 20px;
+      .pr {
+        color: $textBlue;
+      }
+      .pbold {
+        color: $textBlue;
+        font-weight: 700;
+        font-size: 17px;
+      }
+      .psmall {
+        color: rgb(164, 164, 164);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+    }
+    .three_:last-child {
+      border-right: 1px rgb(255, 255, 255) solid;
+    }
+    #avatarBox {
+      margin-right: 40px;
+      background-color: #21407d2e;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #avaPic {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  #routesBox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    cursor: pointer;
+    .routeLinks {
+      margin-bottom: -8px;
+      p {
+        color: $textBlue;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+      p:hover {
+        color: $lightGreen;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+    }
+    .routeLinks:hover {
+      border-bottom: 2px solid $lightGreen;
+      margin-bottom: -8px;
+    }
+    .activeRoute {
+      border-bottom: 2px solid $lightGreen;
+      margin-bottom: -8px;
+      color: $lightGreen;
+      font-size: 12px;
+    }
+  }
+}

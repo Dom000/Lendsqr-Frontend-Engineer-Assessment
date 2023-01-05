@@ -1,0 +1,154 @@
+@import "../../breakpoints/breakpoints.scss";
+
+$textBlue: #213f7d;
+$lightGreen: #39cdcc;
+#loginBox {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  @include media("<=phone") {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+  @include media(">phone", "<=tablet", "retina2x") {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+  #firstSec {
+    padding: 80px;
+    width: 60%;
+    #hero {
+      @include media("<=phone") {
+        width: 200px;
+        margin-top: 20px;
+      }
+      @include media(">phone", "<=tablet", "retina2x") {
+        width: 300px;
+        margin-left: 10px;
+      }
+    }
+    #loginLogo2 {
+      object-fit: contain;
+      width: 130px;
+    }
+  }
+
+  #secondSec {
+    // padding-top: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    @include media("<=phone") {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      justify-content: center;
+    }
+    @include media(">phone", "<=tablet", "retina2x") {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      flex-direction: column;
+      justify-content: center;
+    }
+    button {
+      background-color: $lightGreen;
+      color: #fff;
+      border-radius: 5px;
+      padding: 8px;
+      border: none;
+      margin-top: 20px;
+      width: 70%;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #62e9e9;
+    }
+    p {
+      font-size: 12px;
+      color: $lightGreen;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+    p:hover {
+      text-decoration: underline;
+    }
+    #bigtextDiv {
+      color: $textBlue;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+
+      p {
+        color: rgb(31, 42, 58);
+        font-weight: 100;
+        font-size: 12px;
+        margin-top: 7px;
+      }
+    }
+    #secBigtext {
+      display: flex;
+      flex-direction: column;
+      #secinpt {
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        border: 1px rgb(82, 81, 81) solid;
+        margin: 10px 0;
+        width: 70%;
+        @include media("<=phone") {
+          width: 100%;
+        }
+        @include media(">phone", "<=tablet", "retina2x") {
+          width: 100%;
+        }
+
+        p {
+          //   margin-left: -10px;
+          font-weight: 700;
+          color: $lightGreen;
+          font-size: 12px;
+          letter-spacing: 2px;
+          cursor: pointer;
+        }
+        input {
+          width: 85%;
+          border: none;
+          @include media("<=phone") {
+            width: 75%;
+          }
+          @include media(">phone", "<=tablet", "retina2x") {
+            width: 75%;
+          }
+        }
+      }
+      input {
+        width: 70%;
+        padding: 8px;
+        outline: none;
+        @include media("<=phone") {
+          width: 100%;
+        }
+        @include media(">phone", "<=tablet", "retina2x") {
+          width: 100%;
+        }
+      }
+      input::placeholder {
+        font-size: 11px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

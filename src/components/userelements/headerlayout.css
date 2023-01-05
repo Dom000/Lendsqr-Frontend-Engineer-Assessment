@@ -1,0 +1,115 @@
+/**
+*
+* Testing
+*
+**/
+#header_Box {
+  -webkit-box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+          box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+}
+
+#header_Box #innerDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header_Box #innerDiv .three_ {
+  margin-right: 40px;
+  border-right: 1px #d4d4d4 solid;
+  padding-right: 20px;
+}
+
+#header_Box #innerDiv .three_ .pr {
+  color: #213f7d;
+}
+
+#header_Box #innerDiv .three_ .pbold {
+  color: #213f7d;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+#header_Box #innerDiv .three_ .psmall {
+  color: #a4a4a4;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#header_Box #innerDiv .three_:last-child {
+  border-right: 1px white solid;
+}
+
+#header_Box #innerDiv #avatarBox {
+  margin-right: 40px;
+  background-color: #21407d2e;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header_Box #innerDiv #avatarBox #avaPic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+#header_Box #routesBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#header_Box #routesBox .routeLinks {
+  margin-bottom: -8px;
+}
+
+#header_Box #routesBox .routeLinks p {
+  color: #213f7d;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#header_Box #routesBox .routeLinks p:hover {
+  color: #39cdcc;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#header_Box #routesBox .routeLinks:hover {
+  border-bottom: 2px solid #39cdcc;
+  margin-bottom: -8px;
+}
+
+#header_Box #routesBox .activeRoute {
+  border-bottom: 2px solid #39cdcc;
+  margin-bottom: -8px;
+  color: #39cdcc;
+  font-size: 12px;
+}
+/*# sourceMappingURL=headerlayout.css.map */

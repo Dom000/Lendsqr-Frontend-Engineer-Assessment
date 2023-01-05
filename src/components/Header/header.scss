@@ -2,6 +2,93 @@
 
 $textBlue: #213f7d;
 $lightGreen: #39cdcc;
+#mobilenavbox1 {
+  display: flex;
+  transition: all;
+  width: 100%;
+
+  #navhead1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 20px 0;
+    width: 80%;
+    margin-left: 8%;
+  }
+  #blur {
+    background-color: black;
+    transition: all;
+
+    @include media("<=phone") {
+      display: block;
+      width: 20%;
+      background-color: rgba(0, 0, 0, 0.358);
+      position: fixed;
+      left: 80%;
+      transition: all;
+
+      height: 100%;
+      z-index: 1000;
+    }
+    @include media(">phone", "<=tablet", "retina2x") {
+      width: 40%;
+      left: 60%;
+      transition: all;
+
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.358);
+      display: block;
+      height: 100%;
+      z-index: 1000;
+    }
+  }
+  #mobilenavbox {
+    background-color: #fff;
+    position: fixed;
+    transition: all;
+
+    z-index: 1000;
+    width: 60%;
+    display: none;
+    height: 100%;
+    @include media("<=phone") {
+      display: block;
+      width: 80%;
+    }
+    @include media(">phone", "<=tablet", "retina2x") {
+      width: 60%;
+      display: block;
+    }
+    #wrap2 {
+      #navItems2 {
+        display: flex;
+        // justify-content: space-between;
+
+        flex-direction: row;
+        width: max-content;
+        width: 100%;
+        margin: 15px 0px;
+        padding: 0 20px;
+      }
+      #navItemsActive2 {
+        display: flex;
+        // justify-content: space-between;
+        background-color: rgba(0, 255, 255, 0.103);
+        border-left: 4px solid #39cdcc;
+        flex-direction: row;
+        width: max-content;
+        width: 100%;
+        margin: 15px 0px;
+        padding: 0 20px;
+      }
+    }
+    #closeIcon {
+      display: flex;
+      justify-content: end;
+      padding: 10px;
+    }
+  }
+}
 
 #header {
   background-color: #fff;
@@ -14,8 +101,19 @@ $lightGreen: #39cdcc;
   position: fixed;
   width: 100%;
   top: 0;
-  // margin-bottom: 40px;
 
+  #menu {
+    margin-top: 3px;
+    font-size: 20px;
+    display: none;
+    @include media("<=phone") {
+      display: block;
+    }
+    @include media(">phone", "<=tablet", "retina2x") {
+      display: block;
+    }
+  }
+  // margin-bottom: 40px;
 
   @include media("<=phone") {
     //  background-color: $lightGreen;
@@ -76,13 +174,24 @@ $lightGreen: #39cdcc;
     justify-content: space-between;
     align-items: center;
     @include media("<=phone") {
-      width: 65%;
+      // width: 65%;
+      display: flex;
+      justify-content: space-between;
+      align-items: right;
     }
     @include media(">phone", "<=tablet", "retina2x") {
       width: 50%;
     }
     #doc {
       text-decoration: underline;
+      @include media("<=phone") {
+        display: none;
+      }
+    }
+    #noty {
+      @include media("<=phone") {
+        display: none;
+      }
     }
 
     #secondSpan {
@@ -102,6 +211,23 @@ $lightGreen: #39cdcc;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        #logoutBox {
+          box-shadow: rgb(201, 201, 201) 1px 4px 10px 2px;
+          border-radius: 8px;
+          background-color: #fff;
+          position: absolute;
+          top: 50px;
+          p {
+            // padding: 5px;
+            margin: 8px;
+            font-size: 12px;
+            color: red;
+            border-radius: 4px;
+          }
+          p:hover {
+            background-color: rgb(232, 232, 232);
+          }
+        }
       }
     }
   }

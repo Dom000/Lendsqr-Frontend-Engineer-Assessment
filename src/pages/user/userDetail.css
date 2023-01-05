@@ -1,0 +1,49 @@
+/**
+*
+* Testing
+*
+**/
+#detailDiv {
+  -webkit-box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+          box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+#detailDiv .sevDiv {
+  border-bottom: solid 1px #d8d8d8;
+  margin-bottom: 10px;
+}
+
+#detailDiv .sevDiv .infotext {
+  color: #213f7d;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+#detailDiv .sevDiv .detailBox {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 180px 180px 180px 180px 180px;
+      grid-template-columns: 180px 180px 180px 180px 180px;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+#detailDiv .sevDiv .detailBox .firstP {
+  color: #adadad;
+  font-size: 10px;
+}
+
+#detailDiv .sevDiv .detailBox .secondP {
+  color: #545f7d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#detailDiv .sevDiv:last-child {
+  border-bottom: solid 1px white;
+}
+/*# sourceMappingURL=userDetail.css.map */

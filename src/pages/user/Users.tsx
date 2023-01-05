@@ -17,17 +17,27 @@ import ActionTab from "../../components/actionTab/ActionTab";
 import { useLocation, useNavigate } from "react-router-dom";
 import { redirect } from "react-router-dom";
 import FilterAction from "../../components/filterAction/FilterAction";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../features/store";
+import {
+  handleFilterBox,
+  handleFilterValue,
+} from "../../features/lendsqrSlice";
 
 function Users() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [users, setUsers] = useState([]);
-  const [filtertab, setFilterTab] = useState(false);
+
   const [userswithloan, setUsersWithLoan] = useState([]);
   const [userswithbalance, setUsersWithBalance] = useState([]);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [activerow, setActiveRow] = useState<any | null>(null);
 
+  const users = useSelector((state: RootState) => state?.lendsqr?.filterValue);
+  const filtertab = useSelector(
+    (state: RootState) => state?.lendsqr?.FilterBox
+  );
   console.log(activerow);
 
   const loadData = async () => {
@@ -43,7 +53,8 @@ function Users() {
 
     setUsersWithBalance(newData2);
     setUsersWithLoan(newData);
-    setUsers(userData);
+    dispatch(handleFilterValue(userData));
+    // setUsers(userData);
   };
 
   useEffect(() => {
@@ -161,7 +172,7 @@ function Users() {
                 <div className=" tddiv ">
                   <p>organization</p>
                   <BsFilter
-                    onClick={() => setFilterTab(!filtertab)}
+                    onClick={() => dispatch(handleFilterBox(true))}
                     className="filterIcon"
                   />
                 </div>
@@ -171,7 +182,7 @@ function Users() {
                 <div className=" tddiv ">
                   <p className="">Username</p>
                   <BsFilter
-                    onClick={() => setFilterTab(!filtertab)}
+                    onClick={() => dispatch(handleFilterBox(true))}
                     className="filterIcon"
                   />
                 </div>
@@ -181,7 +192,7 @@ function Users() {
                 <div className=" tddiv  ">
                   <p>Email</p>
                   <BsFilter
-                    onClick={() => setFilterTab(!filtertab)}
+                    onClick={() => dispatch(handleFilterBox(true))}
                     className="filterIcon"
                   />
                 </div>
@@ -190,7 +201,7 @@ function Users() {
                 <div className="tddiv ">
                   <p className="">Phone number</p>
                   <BsFilter
-                    onClick={() => setFilterTab(!filtertab)}
+                    onClick={() => dispatch(handleFilterBox(true))}
                     className="filterIcon"
                   />
                 </div>
@@ -199,7 +210,7 @@ function Users() {
                 <div className="tddiv  ">
                   <p className="">Date joined</p>
                   <BsFilter
-                    onClick={() => setFilterTab(!filtertab)}
+                    onClick={() => dispatch(handleFilterBox(true))}
                     className="filterIcon"
                   />
                 </div>
@@ -209,7 +220,7 @@ function Users() {
                 <div className=" tddiv ">
                   <p className="">Status</p>
                   <BsFilter
-                    onClick={() => setFilterTab(!filtertab)}
+                    onClick={() => dispatch(handleFilterBox(true))}
                     className="filterIcon"
                   />
                 </div>

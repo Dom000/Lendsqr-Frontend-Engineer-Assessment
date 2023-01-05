@@ -14,6 +14,10 @@
     @include media("<=phone") {
       display: none;
     }
+
+    @include media(">phone", "<=tablet", "retina2x") {
+      display: none;
+    }
   }
   #main {
     flex-direction: column;
@@ -22,6 +26,11 @@
     margin-top: 3%;
     padding: 20px;
     @include media("<=phone") {
+      // flex-direction: column;
+      width: 100%;
+      margin-left: 0;
+    }
+    @include media(">phone", "<=tablet", "retina2x") {
       // flex-direction: column;
       width: 100%;
       margin-left: 0;

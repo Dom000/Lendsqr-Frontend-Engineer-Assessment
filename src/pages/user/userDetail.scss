@@ -1,0 +1,41 @@
+@import "../../breakpoints/breakpoints.scss";
+$textBlue: #213f7d;
+$lightGreen: #39cdcc;
+$textgrey: #545f7d;
+
+#detailDiv {
+  box-shadow: rgba(219, 219, 219, 0.299) 5px 1px 10px 0px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  .sevDiv {
+    border-bottom: solid 1px rgb(216, 216, 216);
+    margin-bottom: 10px;
+
+    .infotext {
+      color: $textBlue;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .detailBox {
+      display: grid;
+      grid-template-columns: 180px 180px 180px 180px 180px;
+      margin-bottom: 20px;
+      gap: 10px;
+      .firstP {
+        color: rgb(173, 173, 173);
+        font-size: 10px;
+      }
+      .secondP {
+        color: $textgrey;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .sevDiv:last-child {
+    border-bottom: solid 1px rgb(255, 255, 255);
+  }
+}

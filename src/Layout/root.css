@@ -29,6 +29,12 @@
   }
 }
 
+@media (min-width: 361px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 361px) and (max-width: 768px) and (min-resolution: 192dpi) {
+  #layout #side {
+    display: none;
+  }
+}
+
 #layout #main {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -41,6 +47,13 @@
 }
 
 @media (max-width: 360px) {
+  #layout #main {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 361px) and (max-width: 768px) and (min-resolution: 192dpi) {
   #layout #main {
     width: 100%;
     margin-left: 0;

@@ -13,7 +13,7 @@ export const getAllusers = async () => {
 }
 
 
-export const getSingleUser = async (id:string) => {
+export const getSingleUser = async (id:string|undefined) => {
     try {
         const res = await fetch(USERAPI + `/${id}`)
         const data = await res.json();
